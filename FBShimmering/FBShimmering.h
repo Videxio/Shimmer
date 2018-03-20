@@ -21,7 +21,7 @@ typedef NS_ENUM(NSInteger, FBShimmerDirection) {
   FBShimmerDirectionDown,
 };
 
-static const float FBShimmerDefaultBeginTime = CGFLOAT_MAX;
+static const CFTimeInterval FBShimmerDefaultBeginTime = CGFLOAT_MAX;
 
 @protocol FBShimmering <NSObject>
 
