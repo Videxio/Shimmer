@@ -38,7 +38,7 @@ static void FBShimmeringLayerAnimationApplyDragCoefficient(CAAnimation *animatio
   CGFloat k = FBShimmeringLayerDragCoefficient();
   
   if (k != 0 && k != 1) {
-    animation.speed = 1 / k;
+    animation.speed = (float)(1 / k);
   }
 }
 
