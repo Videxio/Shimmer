@@ -326,14 +326,14 @@ static CAAnimation *shimmer_slide_finish(CAAnimation *a)
   }
 
   // extra distance for the gradient to travel during the pause.
-  CGFloat extraDistance = length + _shimmeringSpeed * _shimmeringPauseDuration;
+  CGFloat extraDistance = length + _shimmeringSpeed * (CGFloat)_shimmeringPauseDuration;
 
   // compute how far the shimmering goes
   CGFloat fullShimmerLength = length * 3.0f + extraDistance;
   CGFloat travelDistance = length * 2.0f + extraDistance;
   
   // position the gradient for the desired width
-  CGFloat highlightOutsideLength = (1.0 - _shimmeringHighlightLength) / 2.0;
+  CGFloat highlightOutsideLength = (1.0f - _shimmeringHighlightLength) / 2.0f;
   _maskLayer.locations = @[@(highlightOutsideLength),
                            @(0.5),
                            @(1.0 - highlightOutsideLength)];
